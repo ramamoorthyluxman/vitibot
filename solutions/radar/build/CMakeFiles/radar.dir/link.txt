@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/radar.dir/src/main.cpp.o  -o radar  libradarlib.a -lstdc++fs 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libradarlib.a  CMakeFiles/radarlib.dir/src/radar.cpp.o
+/usr/bin/ranlib libradarlib.a

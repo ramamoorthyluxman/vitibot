@@ -1,29 +1,86 @@
-### Vitibot - Test technique ingénieur développement robotique
+# Radar
 
-Quelques règles :
+## Files
 
-- Timing : tu n'as pas de limite de temps
+- `Radar.h` and `Radar.cpp`: These files define the `Radar` class, which includes methods for reading radar data from a file, processing the data, and implementing algorithm.
 
-- Les exercices sont indépendants, on te demande de faire un workspace par exercice
+- `main.cpp`: This is the main program that uses the `Radar` class.
 
-- Langage de programmation: C++
+## Compilation
 
-- Organise ton workspace avec les dossiers `src`, `include` et `bin`, et utilise `CMake` pour compiler ton projet (`CMakeLists.txt`)
+This project uses CMake for managing the build process. To compile the project, follow these steps:
 
-- Utilise le contrôle de version dans votre développement (Git) et partage avec nous le projet avec le dossier `./git` afin de pouvoir vérifier ton processus de développement (branches, historique des commits, etc.)
+1. Navigate to the `build` directory:
 
-Pour tester ton programme, tu utiliseras les _inputsX.txt_ en entrée _stdin_ comme cela :
-`./main < input1.txt` par exemple.
+```bash
+cd build
+cmake ..
+make
+```
 
-Tu peux aussi faire une lecture du fichier passé en paramètre comme cela :
-'./main input1.txt' par exemple.
+## Execution
+```bash
+./radar < ../data/input1.txt
+```
 
-On t'épargne la gestion des éventuelles erreurs de droits d'accès ou de fichier inexistant.
+## Results
 
-La sortie se fera sur _stdout_.
+The program will output, for example for input1.txt:
 
-Si tu as des questions concernant le test, n'hésite pas à nous envoyer un mail :
+```bash
+Visibility: 1
+NumObstacles: 5
+0 1
+2 2
+-1 0
+0 -1
+1 0
+4 0 2 3 
+```
 
-- Guillermo : guillermo.herrera@vitibot.fr
+# Linear Regression 
 
-Bonne chance !
+## Files
+
+- `LinearRegression.h` and `LinearRegression.cpp`: These files define the `LinearRegression` class, which includes methods for reading data from a file, computing a linear regression model, and implementing the custom RANSAC algorithm.
+
+- `main.cpp`: This is the main program that uses the `LinearRegression` class.
+
+## Compilation
+
+This project uses CMake for managing the build process. To compile the project, follow these steps:
+
+1. Navigate to the `build` directory:
+
+```bash
+cd build
+cmake ..
+make
+```
+
+
+## Execution
+
+The program has the path to the input file as an argument. To execute:
+
+```bash
+./linear_regression
+```
+
+## Solution and results
+
+In the header file - LinearRegression.h, I have commented the parts of the tasks 1.a, 1.b, 2.a
+
+2.c Complexity The complexity of the algorithm is O(N) where N is the number of points.
+
+2.d The algorithm
+
+2.e The probability of not hitting n model points after k iterations is (1 - (p^n))^k. To find the ideal number of iterations k for a 99% probability of hitting at least once, we solve 1 - (1 - (p^n))^k = 0.99 for k, which gives k = log(1 - 0.99) / log(1 - p^n). For n = 2 and p = 23%, this gives approximately 317 iterations.
+
+The program will output: 
+```bash   
+Linear regression model: y = 0.117921x + 0.398267
+Best model: y = -4.07809x + 2.05293
+
+```
+

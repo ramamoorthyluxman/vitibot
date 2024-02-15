@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblinear_regression_lib.a  CMakeFiles/linear_regression_lib.dir/src/LinearRegression.cpp.o
+/usr/bin/ranlib liblinear_regression_lib.a

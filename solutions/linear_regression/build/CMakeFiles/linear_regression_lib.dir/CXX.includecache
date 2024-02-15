@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/LinearRegression.h
+vector
+-
+string
+-
+
+/mnt/f/phd/Curriculum/jobs/vitibot/Test technique ingé ROS/Test technique ingé ROS/solutions/linear_regression/src/LinearRegression.cpp
+LinearRegression.h
+/mnt/f/phd/Curriculum/jobs/vitibot/Test technique ingé ROS/Test technique ingé ROS/solutions/linear_regression/src/LinearRegression.h
+fstream
+-
+random
+-
+algorithm
+-
+numeric
+-
+limits
+-
+cmath
+-
+iostream
+-
+cstdlib
+-
+
